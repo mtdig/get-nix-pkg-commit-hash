@@ -53,3 +53,10 @@ This is useful when you need to pin a package to an exact version using `fetchTa
 ```
 
 See [test.sh](test.sh) for the test cases.
+
+
+## TODO
+
+- [ ] manage releases
+- [ ] add to nix repo
+- [ ] list last 5 versions if no version specified (workaround is to just pass ie. 0)
