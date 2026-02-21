@@ -106,7 +106,7 @@ for NIX_PATH in "${POSSIBLE_PATHS[@]}"; do
         while IFS= read -r line; do
             SHA="${line%% *}"
             MSG="${line#* }"
-            echo -e "  ${YELLOW}${SHA:0:12}${RESET} ${BOLD}$MSG${RESET}"
+            echo -e "  ${YELLOW}${SHA}${RESET} ${BOLD}$MSG${RESET}"
         done <<< "$MATCH"
         exit 0
     else
@@ -115,7 +115,7 @@ for NIX_PATH in "${POSSIBLE_PATHS[@]}"; do
         echo "$COMMITS" | head -10 | while IFS= read -r line; do
             SHA="${line%% *}"
             MSG="${line#* }"
-            echo -e "    ${DIM}${SHA:0:12} $MSG${RESET}"
+            echo -e "    ${DIM}${SHA} $MSG${RESET}"
         done
         echo ""
     fi
