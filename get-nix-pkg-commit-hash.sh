@@ -1,8 +1,18 @@
 #!/usr/bin/env bash
+#
+# get-nix-pkg-commit-hash.sh
+# Find the nixpkgs commit that introduced a specific version of a Nix package.
+#
+# Version:       1.0.0
+# Author:        Jeroen Van Renterghem
+# Repository:    https://github.com/mtdig/get-nix-pkg-commit-hash
+# Created:       2026-02-21
+# Last modified: 2026-02-21
+#
 
 set -euo pipefail
 
-# ── ANSI colors ───────────────────────────────────────────────────────
+# ANSI color codes for pretty output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
