@@ -54,6 +54,14 @@ This is useful when you need to pin a package to an exact version using `fetchTa
 
 See [test.sh](test.sh) for the test cases.
 
+## DEVELOP
+
+- use make 
+    - `make preview`
+    - `make release`
+    - `make push`
+
+`make help` for help
 
 ## TODO
 

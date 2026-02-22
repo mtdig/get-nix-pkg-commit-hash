@@ -3,7 +3,7 @@
 # get-nix-pkg-commit-hash.sh
 # Find the nixpkgs commit that introduced a specific version of a Nix package.
 #
-# Version:       0.1.0
+# Version:       1.1.0
 # Author:        Jeroen Van Renterghem
 # Repository:    https://github.com/mtdig/get-nix-pkg-commit-hash
 # Created:       2026-02-21
