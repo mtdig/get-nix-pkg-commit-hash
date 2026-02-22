@@ -3,11 +3,13 @@
 # get-nix-pkg-commit-hash.sh
 # Find the nixpkgs commit that introduced a specific version of a Nix package.
 #
-# Version:       1.0.0
+# Version:       0.1.0
 # Author:        Jeroen Van Renterghem
 # Repository:    https://github.com/mtdig/get-nix-pkg-commit-hash
 # Created:       2026-02-21
-# Last modified: 2026-02-21
+# Last modified: 2026-02-22
+#
+# NOTES:
 #
 
 set -euo pipefail
@@ -21,16 +23,17 @@ CYAN='\033[0;36m'
 BOLD='\033[1m'
 DIM='\033[2m'
 RESET='\033[0m'
+BOLD_YELLOW_ON_BLACK='\033[1;33;40m'
 
 if [[ $# -ne 2 ]]; then
-    echo -e "${BOLD}Usage:${RESET} $0 ${CYAN}<package-name>${RESET} ${CYAN}<version>${RESET}"
+    echo -e "${BOLD_YELLOW_ON_BLACK}Usage:${RESET} $0 ${CYAN}<package-name>${RESET} ${CYAN}<version>${RESET}"
     exit 1
 fi
 
 PACKAGE="$1"
 VERSION="$2"
 
-# First do a quick search if the package exists
+# First do a quick search if the package exists, using json because of formatting
 echo -e "${BLUE}▸${RESET} Searching for ${BOLD}$PACKAGE${RESET} in nixpkgs..."
 SEARCH_JSON=$(nix search nixpkgs "$PACKAGE" --json 2>/dev/null || echo "{}")
 
